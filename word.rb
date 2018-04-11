@@ -1,4 +1,5 @@
-# write your solution here
+#Reworked it so now you can churn in a sentence and it outputs a sentence.
+
 $position = 0
 
 for value in ARGV
@@ -6,7 +7,7 @@ for value in ARGV
 	test = value.downcase
 
 	if test[0] =~ /[aeiou]/
-		puts test + "way "
+		print test + "way "
 	else
 		
 		test.chars.to_a.each do |i|
@@ -17,7 +18,8 @@ for value in ARGV
 				$position += 1
 			end
 		end
-		puts test[$position, (test.length-1)] + test[0, $position] +"ay "
+		print test[$position, (test.length-1)] + test[0, $position] +"ay "
 		$position = 0
 	end
 end
+puts " "
